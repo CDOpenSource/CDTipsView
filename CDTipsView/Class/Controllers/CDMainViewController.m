@@ -77,7 +77,14 @@
     [tipView tipString:@"~温馨小提示~\n感谢你下载并使用此开源小控件，如果你觉得还有任何的疑问或者建议给到我，请发送至我的邮箱chendi1123@aliyun.com，我会及时回复你，感谢你的支持，谢谢!" fontSize:14.0f];
     [tipView show:YES];
     [tipView hiden:YES delayTime:10.0];
+    
+    
 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(11.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tipView setTipString:@"√ 恭喜您修改成功"];
+        [tipView show:YES];
+        [tipView hiden:YES delayTime:1.0];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
