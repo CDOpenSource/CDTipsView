@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDMainViewController">
+            <connections>
+                <outlet property="fieldTextTest" destination="MeQ-wt-fJ3" id="I2D-oy-gjb"/>
+                <outlet property="segmentedControlTest" destination="PPu-Je-AV0" id="Ih4-yp-v2m"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请在此输入你想显示的吐司内容" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-wt-fJ3">
+                    <rect key="frame" x="20" y="80" width="560" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PPu-Je-AV0">
+                    <rect key="frame" x="20" y="130" width="560" height="29"/>
+                    <segments>
+                        <segment title="底部出现"/>
+                        <segment title="中间出现"/>
+                        <segment title="顶部出现"/>
+                    </segments>
+                    <color key="tintColor" red="1" green="0.58924307610341431" blue="0.65309849081060301" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="changeTipsPostionEvent:" destination="-1" eventType="valueChanged" id="qcF-JB-4i3"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od8-LR-ZMQ">
+                    <rect key="frame" x="20" y="198" width="560" height="35"/>
+                    <color key="backgroundColor" red="0.87095555690605153" green="1" blue="0.82699842769777199" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="2S0-2k-yX1"/>
+                    </constraints>
+                    <state key="normal" title="点击测试功能点"/>
+                    <connections>
+                        <action selector="testFunctionMethod:" destination="-1" eventType="touchUpInside" id="hsQ-c5-Ri7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PPu-Je-AV0" firstAttribute="top" secondItem="MeQ-wt-fJ3" secondAttribute="bottom" constant="20" id="6I1-u3-1fx"/>
+                <constraint firstAttribute="trailing" secondItem="PPu-Je-AV0" secondAttribute="trailing" constant="20" id="WcQ-i1-PD4"/>
+                <constraint firstItem="Od8-LR-ZMQ" firstAttribute="top" secondItem="PPu-Je-AV0" secondAttribute="bottom" constant="40" id="YKV-Ov-0wt"/>
+                <constraint firstItem="MeQ-wt-fJ3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="YTW-0y-0XN"/>
+                <constraint firstItem="Od8-LR-ZMQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="YWL-Ed-661"/>
+                <constraint firstItem="PPu-Je-AV0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="bIh-Qq-VAY"/>
+                <constraint firstAttribute="trailing" secondItem="Od8-LR-ZMQ" secondAttribute="trailing" constant="20" id="inU-wP-ahR"/>
+                <constraint firstItem="MeQ-wt-fJ3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="q6n-o6-m4T"/>
+                <constraint firstAttribute="trailing" secondItem="MeQ-wt-fJ3" secondAttribute="trailing" constant="20" id="wEh-G9-xIP"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
